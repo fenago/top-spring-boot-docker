@@ -12,9 +12,12 @@ Many people use containers to wrap their Spring Boot applications, and building 
 
 We assume that you know how to create and build a basic Spring Boot application. 
 
-From the terminal:
-Run this first:   sdk install java 17.0.7-tem
-next cd into the demo directory:    cd demo
+== Getting Started
+- Fork this Repository
+- go to:  gitpod.io/#https://github.com/<your-github-username>/top-spring-boot-docker
+Then, from the terminal:
+- Run this first:   sdk install java 17.0.7-tem
+- next cd into the demo directory:    cd demo
 
 == A Basic Dockerfile
 
