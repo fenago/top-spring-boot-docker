@@ -10,13 +10,15 @@ projects: [spring-boot]
 
 Many people use containers to wrap their Spring Boot applications, and building containers is not a simple thing to do. This is a guide for developers of Spring Boot applications, and containers are not always a good abstraction for developers. They force you to learn about and think about low-level concerns. However, you may on occasion be called on to create or use a container, so it pays to understand the building blocks. In this guide, we aim to show you some of the choices you can make if you are faced with the prospect of needing to create your own container.
 
-We assume that you know how to create and build a basic Spring Boot application. If not, go to one of the https://spring.io/guides[Getting Started Guides] -- for example, the one on building a https://spring.io/guides/gs/rest-service/[REST Service]. Copy the code from there and practice with some of the ideas contained in this guide.
+We assume that you know how to create and build a basic Spring Boot application. 
 
-NOTE: There is also a Getting Started Guide on https://spring.io/guides/gs/spring-boot-docker[Docker], which would also be a good starting point, but it does not cover the range of choices that we cover here or cover them in as much detail.
+From the terminal:
+Run this first:   sdk install java 17.0.7-tem
+next cd into the demo directory:    cd demo
 
 == A Basic Dockerfile
 
-A Spring Boot application is easy to convert into an executable JAR file. All the https://spring.io/guides[Getting Started Guides] do this, and every application that you download from https://start.spring.io[Spring Initializr] has a build step to create an executable JAR. With Maven, you run `./mvnw install`, With Gradle, you run `./gradlew build`. A basic Dockerfile to run that JAR would then look like this, at the top level of your project:
+A Spring Boot application is easy to convert into an executable JAR file.  With Maven, you run `./mvnw install`, With Gradle, you run `./gradlew build`. A basic Dockerfile to run that JAR would then look like this, at the top level of your project:
 
 `Dockerfile`
 ====
